@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background: url(../Image/employee/background_2.png) no-repeat center center;
+    background-size: cover;
+    /* background-color: #dddddd; */
+}
+
+.navbar_whole{
+    padding: 0;
+}
+
+.navbar{
+    padding-top: 0px   !important;
+    padding-bottom: 0px  !important;
+    font-family: "Lato";
+    font-size: 20px;
+    background-color: #dddddd  !important;
+}
+/* #0012ff  #000000 */
+
+
+#company_logo{
+    width: 100%;
+    /* height: 100px; */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-button-1{
+    background-color: #0012ff;
+    color: #dddddd;
+    gap: 10px;
+}
+
+.nav-button-2{
+    background-color: #22a20e;
+    color: #dddddd;
+}
+
+#tandc_img{
+    width: 25px;
+    height: 25px;
+}
+
+#support_img{
+    width: 25px;
+    height: 25px;
+}
+
+#home_img{
+    width: 25px;
+    height: 25px;
+}
+
+.dropdown-menu{
+    background-color: #dddddd;
+}
+
+main{
+    height: 800px;
+}
+
+
+
+footer{
+    /* background-color: #212121; */
+    /* background-color: #afcdf2; */
+    /* background-color: #cdd8e6; */
+    background-color: #dddddd;
+    width: auto;
+    height: 280px;
+    /* #8c8c8c #212121 */
+}
+
+#footer_div{
+    padding-top: 40px;
+    padding-left: 110px;
+}
+
+.f_head_div{
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.f_head_list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.f_head_list a{
+    text-decoration: none;
+    color: black;
+}

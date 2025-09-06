@@ -1,11 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Employer Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+KR:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Code+Pro:ital,wght@0,801;1,801&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+KR:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Code+Pro:ital,wght@0,801;1,801&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/employer.css">
+    <!-- <link rel="stylesheet" href="JS/employer.js"> -->
 </head>
+
 <body>
-    
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid navbar_whole px-3">
+                    <a class="navbar-brand p-0" href="#">
+                        <img id="company_logo" src="Image/home/logo_1.png" alt="" height="100px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+
+                                <a class="nav-link active d-flex align-items-center mx-2" aria-current="page" href="#">
+                                    <img class="me-2" id="home_img" src="Image/home/home_1.png" alt="">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="Term_&_Cond.pdf" class="nav-link d-flex align-items-center mx-2">
+                                    <img class="me-2" id="tandc_img" src="Image/home/terms-and-conditions_1.png" alt="">
+                                    Terms & Condition
+                                </a>
+                                <!-- <a class="nav-link" href="#">Terms & Condition</a> -->
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="me-2" id="support_img" src="Image/home/support_2.png" alt="">
+                                    Support
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item " href="#" style="font-family: 'Lota';">Toll-Free:
+                                            1800-123-4567</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item " href="#"
+                                            style="font-family: 'Lota';">naukribandhu@gmail.com</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li> -->
+                        </ul>
+                        <form class="d-flex gy-2">
+                            <button type="button" class="btn nav-button-1 me-3">LOGIN</button>
+                            <button type="button" class="btn nav-button-2 me-4">REGISTER</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 left_side d-flex justify-content-center align-items-start">
+                    <div class="card text-white border-0 bg-transparent w-100 h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">Hire Workers Near You</h2>
+                            <!-- <p class="card-text"></p> -->
+                            <!-- <form action="" class="form-control">
+                                <label for="descrip">Job Description</label>
+                                <input type="text" name="descrip" class="form-text">
+                                <br>
+                                <label for="location">Location</label>
+                                <input type="text" name="location" class="form-text">
+                                <label for="pincode">Pin-Code</label>
+                                <input type="text" name="pincode" class="form-text">
+                                <br>
+                                <label for="Occup">Select Your Requirement</label>
+                                <select name="Occup" id="" class="form-select">
+                                    <option value="Select">Select Occupation</option>
+                                    <option value="Labour">Labour</option>
+                                    <option value="Mistri">Mistri</option>
+                                </select>
+                                <br>
+                                <label for="fdate">From Date</label>
+                                <input type="date" name="fdate" class="form-date">
+                                <label for="ftime">Time</label>
+                                <input type="time" name="ftime" class="form-time">
+                                <br>
+                                <label for="tdate">To Date</label>
+                                <input type="date" name="tdate" class="form-date">
+                                <label for="ttime">Time</label>
+                                <input type="time" name="ttime" class="form-time">
+                                <br>
+                                
+                            </form> -->
+                            <div class="p-3 border rounded bg-light" style="max-height: 600px; overflow-y: auto;">
+                                <form id="jobForm">
+                                    <!-- Job Description -->
+                                    <div class="mb-3">
+                                        <label for="descrip" class="form-label">Job Description</label>
+                                        <input type="text" name="descrip" id="descrip" class="form-control"
+                                            placeholder="Enter job details">
+                                    </div>
+
+                                    <!-- Location & Pin Code -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="location" class="form-label">Location</label>
+                                            <input type="text" name="location" id="location" class="form-control"
+                                                placeholder="Enter location">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="pincode" class="form-label">Pin-Code</label>
+                                            <input type="text" name="pincode" id="pincode" class="form-control"
+                                                placeholder="Enter pin code">
+                                        </div>
+                                    </div>
+
+                                    <!-- Requirement -->
+                                    <div class="mb-3">
+                                        <label for="requirement" class="form-label">Requirement</label>
+                                        <input type="text" name="requirement" id="requirement" class="form-control"
+                                            placeholder="Enter your requirement">
+                                    </div>
+
+                                    <!-- Occupation & Quantity & Member -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-3">
+                                            <label for="Occup" class="form-label">Occupation</label>
+                                            <select name="Occup" id="Occup" class="form-select">
+                                                <option selected disabled>Select Occupation</option>
+                                                <option value="Labour">Labour</option>
+                                                <option value="Mistri">Mistri</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label for="Price" class="form-label">Quantity</label>
+                                            <input type="number" name="Price" id="price" class="form-control"
+                                                placeholder="Enter Price">
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label for="Qty" class="form-label">Quantity</label>
+                                            <input type="number" name="Qty" id="Qty" class="form-control" min="1"
+                                                placeholder="Enter quantity">
+                                        </div>
+
+                                        <div class="col-md-3 d-flex align-items-end">
+                                            <button type="button" class="btn btn-success w-100">
+                                                <i class="bi bi-person-plus"></i> Add Member
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- From Date & Time -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="fdate" class="form-label">From Date</label>
+                                            <input type="date" name="fdate" id="fdate" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="ftime" class="form-label">Time</label>
+                                            <input type="time" name="ftime" id="ftime" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <!-- To Date & Time -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="tdate" class="form-label">To Date</label>
+                                            <input type="date" name="tdate" id="tdate" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="ttime" class="form-label">Time</label>
+                                            <input type="time" name="ttime" id="ttime" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-primary w-100 mb-3">Submit</button>
+                                </form>
+
+                                <!-- Display total inputs -->
+                                <div id="inputCount" class="text-muted small"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer_div" class="container-fluid footer">
+            <div class="row">
+                <div class="col">
+                    <div class="f_head_div">For People Hiring</div>
+                    <ul class="f_head_list">
+                        <li><a href="">How to hire</a></li>
+                        <li><a href="">Find Workers</a></li>
+                        <li><a href="">Post Work Requirement</a></li>
+                        <li><a href="">Daily Wage Jobs</a></li>
+                        <li><a href="">Skilled & Unskilled Labour</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="f_head_div">For Workers</div>
+                    <ul class="f_head_list">
+                        <li><a href="">Ways to Earn</a></li>
+                        <li><a href="">Find Work by Skills</a></li>
+                        <li><a href="">Nearby Job Openings</a></li>
+                        <li><a href="">Safety & Work Guidelines</a></li>
+                        <li><a href="">Worker Rights & Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="f_head_div">Resources</div>
+                    <ul class="f_head_list">
+                        <li><a href="">Blog / Tips for Hiring</a></li>
+                        <li><a href="">Training & Skill Development</a></li>
+                        <li><a href="">Community Support</a></li>
+                        <li><a href="">News & Updates</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="f_head_div">Support & Help</div>
+                    <ul class="f_head_list">
+                        <li><a href="">Help Center</a></li>
+                        <li><a href="">How to Use the Platform</a></li>
+                        <li><a href="">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="f_head_div">Company</div>
+                    <ul class="f_head_list">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Partnerships</a></li>
+                        <li><a href="">Social Responsibility</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="f_head_div">Legal</div>
+                    <ul class="f_head_list">
+                        <li><a href="">User Agreement</a></li>
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Accessibility Policy</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="JS/employer.js"></script>
 </body>
+
 </html>
