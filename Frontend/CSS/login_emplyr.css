@@ -79,7 +79,7 @@ body {
 
 .forgot-password {
     font-size: 14px;
-    color: #4A90E2;
+    color: #0A66C2;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -91,7 +91,7 @@ body {
 .login-btn {
     width: 100%;
     padding: 12px;
-    background-color: #4A90E2;
+    background-color:#0A66C2;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -114,7 +114,7 @@ body {
 }
 
 .signup-link a {
-    color: #4A90E2;
+    color: #0A66C2;
     text-decoration: none;
 }
 
