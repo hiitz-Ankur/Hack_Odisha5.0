@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../Image/home/background_2.png);
+}
+
+.navbar{
+    padding-top: 20px   !important;
+    padding-bottom: 20px  !important;
+    font-family: "Lato";
+    font-size: 20px;
+    background-color: #dddddd  !important;
+}
+/* #0012ff  #000000 */
+
+.nav-button-1{
+    background-color: #0012ff;
+    color: #dddddd;
+    gap: 10px;
+}
+
+.nav-button-2{
+    background-color: #22a20e;
+    color: #dddddd;
+}
