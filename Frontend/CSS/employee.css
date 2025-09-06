@@ -65,10 +65,20 @@ body{
 }
 
 main{
-    height: 800px;
+    height: 780px;
 }
 
+.left_side{
+    background-color: rgba(233, 199, 94, 0.8);
+    width: 700px;
+    height: 700px;
+    border-radius: 30px;
+    padding-top: 30px;
+}
 
+.card-title{
+    margin-left: 240px;
+}
 
 footer{
     /* background-color: #212121; */
