@@ -8,10 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+KR:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Code+Pro:ital,wght@0,801;1,801&family=Special+Elite&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+KR:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Code+Pro:ital,wght@0,801;1,801&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+KR:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Code+Pro:ital,wght@0,801;1,801&family=Special+Elite&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/home.css">
 </head>
 
@@ -20,10 +25,10 @@
 <body>
     <header>
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-                <div class="container-fluid navbar_whole">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid navbar_whole px-3">
                     <a class="navbar-brand p-0" href="#">
-                        <img id="company_logo" src="Image/home/logo_1.png" alt="">
+                        <img id="company_logo" src="Image/home/logo_1.png" alt="" height="100px">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -33,32 +38,42 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+                                <a class="nav-link active d-flex align-items-center mx-2" aria-current="page" href="#">
+                                    <img class="me-2" id="home_img" src="Image/home/home_1.png" alt="">
+                                    Home
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a href="#" class="nav-link d-flex align-items-center mx-2">
+                                    <img class="me-2" id="tandc_img" src="Image/home/terms-and-conditions_1.png" alt="">
+                                    Terms & Condition
+                                </a>
+                                <!-- <a class="nav-link" href="#">Terms & Condition</a> -->
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
+                                <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="me-2" id="support_img" src="Image/home/support_2.png" alt="">
+                                    Support
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item " href="#" style="font-family: 'Lota';">Toll-Free:
+                                            1800-123-4567</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item " href="#"
+                                            style="font-family: 'Lota';">naukribandhu@gmail.com</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
+                            </li> -->
                         </ul>
-                        <form class="d-flex gy-2" >
-                            <button type="button" class="btn nav-button-1 me-2">LOGIN</button>
-                            <button type="button" class="btn nav-button-2">REGISTER</button>
+                        <form class="d-flex gy-2">
+                            <button type="button" class="btn nav-button-1 me-3">LOGIN</button>
+                            <button type="button" class="btn nav-button-2 me-4">REGISTER</button>
                         </form>
                     </div>
                 </div>
@@ -69,10 +84,22 @@
     <main>
         <div class="container-fluid g-0">
             <div class="row g-0">
-                <div class="col d-flex justify-content-center align-items-center my-5" id="left_block">
+                <!-- <div class="col d-flex justify-content-center align-items-center my-5" id="left_block">
                     <img id="left_img" src="Image/home/left_img_3.png" alt="">
+                </div> -->
+                <div class="col d-flex justify-content-center align-items-center my-5" id="left_block">
+                    <div class="card text-white border-0 bg-transparent">
+                        <img id="left_img" src="Image/home/left_img_3.png" class="card-img" alt="">
+                        <div id="card-img-overlay_1"
+                            class="card-img-overlay d-flex flex-column justify-content-flex-start align-items-center">
+                            <!-- <h5 class="card-title">Your Title</h5> -->
+                            <h1 class="card-text" id="card_text_1">HIRE WITH TRUST,<br> GROW WITH CONFIDENCE</h1>
+                        </div>
+                    </div>
                 </div>
-                <div class="col right_side d-flex justify-content-center align-items-center  ">
+
+
+                <!-- <div class="col right_side d-flex justify-content-center align-items-center  ">
                     <div class="row">
                         <div class="col">
                             <div>
@@ -83,16 +110,91 @@
 
                         </div>
                     </div>
+                </div> -->
+
+                <div class="col right_side d-flex justify-content-center align-items-center">
+                    <div class="card text-white border-0 bg-transparent w-100 h-100">
+                        <div id="card-img-overlay_2"
+                            class="card-img-overlay d-flex flex-column justify-content-start align-items-end me-5">
+                            <h2 id="card-title-2" class="card-title">Who Are You ?</h2>
+                            <div id="right_side_btns" class=" d-flex">
+                                <a href="">
+                                    <button id="btn-1" class="btn">Labor</button>
+                                </a>
+                                <a href="">
+                                    <button id="btn-2" class="btn">Contractor</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </main>
 
-<!-- #181818  #8f8f8f -->
+    <!-- #181818  #8f8f8f -->
     <footer>
-        <div class="container-fluid footer">
-
+        <div id="footer_div" class="container-fluid footer">
+            <div class="row">
+                <div class="col">
+                    <div class = "f_head_div">For People Hiring</div>
+                    <ul class="f_head_list">
+                        <li><a href="">How to hire</a></li>
+                        <li><a href="">Find Workers</a></li>
+                        <li><a href="">Post Work Requirement</a></li>
+                        <li><a href="">Daily Wage Jobs</a></li>
+                        <li><a href="">Skilled & Unskilled Labour</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class = "f_head_div">For Workers</div>
+                    <ul class="f_head_list">
+                        <li><a href="">Ways to Earn</a></li>
+                        <li>Find Work by Skills</li>
+                        <li>Nearby Job Openings</li>
+                        <li>Safety & Work Guidelines</li>
+                        <li>Worker Rights & Benefits</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class = "f_head_div">Resources</div>
+                    <ul class="f_head_list">
+                        <li>Blog / Tips for Hiring</li>
+                        <li>Training & Skill Development</li>
+                        <li>Community Support</li>
+                        <li>News & Updates</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class = "f_head_div">Support & Help</div>
+                    <ul class="f_head_list">
+                        <li>Help Center</li>
+                        <li>How to Use the Platform</li>
+                        <li>Contact Support</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class = "f_head_div">Company</div>
+                    <ul class="f_head_list">
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Partnerships</li>
+                        <li>Social Responsibility</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class = "f_head_div">Legal</div>
+                    <ul class="f_head_list">
+                        <li>User Agreement</li>
+                        <li>Terms of Service</li>
+                        <li>Privacy Policy</li>
+                        <li>Accessibility Policy</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+        
     </footer>
 
 
