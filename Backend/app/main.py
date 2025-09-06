@@ -38,3 +38,13 @@ app.include_router(feedback_router.router)
 @app.get("/")
 def root():
     return {"message": "Backend is running 🚀"}
+from fastapi.responses import FileResponse
+import os
+
+# existing app setup...
+
+# 👇 Add this after all app.include_router(...)
+@app.get("/favicon.ico")
+async def favicon():
+    favicon_path = os.path.join("static", "favicon.ico")
+    return FileResponse(favicon_path)

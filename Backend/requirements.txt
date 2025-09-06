@@ -1,6 +1,7 @@
-fastapi
+# pip install -r requirements.txtfastapi
 uvicorn
 sqlmodel
 python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
+install email-validator
