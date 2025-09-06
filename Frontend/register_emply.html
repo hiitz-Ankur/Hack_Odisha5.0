@@ -8,44 +8,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <div class="signup-container">
-    <div class="signup-box">
-      <div class="signup-header">
-        <h2>Register</h2>
-      </div>
+  <div class="signup-wrapper">
+    
+    <div class="form-section">
+      <h2>Register</h2>
       <form>
-        <div class="input-group">
-          <input type="text" id="fname" name="fname" placeholder="First name" required>
+        
+        <div class="form-row">
+          <div class="input-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" placeholder="First name" required>
+          </div>
+          <div class="input-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" placeholder="Last name" required>
+          </div>
         </div>
+
+        
         <div class="input-group">
-          <input type="text" id="lname" name="lname" placeholder="Last name" required>
-        </div>
-        <div class="input-group">
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Email" required>
         </div>
-        <div class="input-group">
-          <input type="text" id="bday" name="bday" placeholder="Birth date" required>
-        </div>
-        <div class="input-group">
-          <input type="tel" id="phone_number" name="phone_number" placeholder="Phone number" required>
-        </div>
-        <div class="input-group">
-          <input type="text"id="occupation" name="occupation" placeholder="Occupation" required>
 
+        
+        <div class="form-row">
+          <div class="input-group">
+            <label for="bday">Date of Birth</label>
+            <input type="text" id="bday" name="bday" placeholder="DD/MM/YYYY" required>
+          </div>
+          <div class="input-group">
+            <label for="phone_number">Phone number</label>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="Phone number" required>
+          </div>
         </div>
+
+        
         <div class="input-group">
-        <textarea id="past-experience" name="past-experience" placeholder="Past Experience" rows="3" required></textarea>
+          <label for="occupation">Occupation</label>
+          <input type="text" id="occupation" name="occupation" placeholder="Occupation" required>
         </div>
-        <div class="input-group password-group">
-          <input type="password" id="Epassword" name="Epassword" placeholder="Password" required>
-          <i class="fas fa-eye password-toggle"></i>
+
+        
+        <div class="input-group">
+          <label for="past-experience">Past Experience</label>
+          <textarea id="past-experience" name="past-experience" placeholder="Past Experience" rows="3" required></textarea>
         </div>
-        <div class="input-group password-group">
-          <input type="password" id="Repassword" name="Repassword" placeholder="Confirm password" required>
-          <i class="fas fa-eye password-toggle"></i>
+
+        
+        <div class="form-row">
+          <div class="input-group password-group">
+            <label for="Epassword">Password</label>
+            <input type="password" id="Epassword" name="Epassword" placeholder="Password" required>
+            <i class="fas fa-eye password-toggle"></i>
+          </div>
+          <div class="input-group password-group">
+            <label for="Repassword">Confirm password</label>
+            <input type="password" id="Repassword" name="Repassword" placeholder="Confirm password" required>
+            <i class="fas fa-eye password-toggle"></i>
+          </div>
         </div>
-        <button type="submit" class="signup-btn">Register</button>
       </form>
+    </div>
+
+    <div class="action-section">
+      <button type="submit" class="signup-btn">Register</button>
       <div class="login-link">
         <p>Already have an account? <a href="#">Log In</a></p>
       </div>
@@ -55,6 +82,7 @@
         Sign up with Google
       </button>
     </div>
+
   </div>
 </body>
 </html>
