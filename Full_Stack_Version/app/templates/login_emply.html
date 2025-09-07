@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+KR:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Code+Pro:ital,wght@0,801;1,801&family=Special+Elite&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <div class="login-container">
     <div class="login-box">
       <div class="login-header">
-        <h2>Employee Login</h2>
+        <h2>Login</h2>
       </div>
-      <!-- ✅ Form calls JS instead of reloading -->
-      <form onsubmit="event.preventDefault(); loginEmployee();">
+      <form>
         <div class="input-group">
           <input type="email" id="email" name="email" placeholder="Email" required>
         </div>
         <div class="input-group password-group">
-          <input type="password" id="password" name="password" placeholder="Password" required>
+          <input type="password" id="Epassword" name="Epassword" placeholder="Password" required>
           <i class="fas fa-eye password-toggle"></i>
         </div>
         <div class="fog-password">
@@ -31,25 +33,20 @@
         </div>
         <button type="submit" class="login-btn">Login</button>
       </form>
-
       <div class="divider"><span>or</span></div>
-
       <button class="social-btn google-btn">
         <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google icon">
         Login with Google
       </button>
-
       <button class="social-btn phone-btn">
         <img src="https://img.icons8.com/material-rounded/24/phone--v1.png" alt="Dial icon">
         Login with Phone Number
       </button>
-
       <div class="signup-link">
-        <p>Don't have an account? <a href="/employee_register">Sign Up</a></p>
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
       </div>
     </div>
   </div>
 </body>
-<!-- ✅ JS file for login -->
 <script src="/static/JS/login_emply.js"></script>
 </html>
