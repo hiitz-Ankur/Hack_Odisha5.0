@@ -65,19 +65,19 @@ body{
 }
 
 main{
-    height: 780px;
+    height: 600px;
 }
 
 .left_side{
     background-color: rgba(233, 199, 94, 0.8);
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     border-radius: 30px;
-    padding-top: 30px;
+    padding-top: 0px;
 }
 
 .card-title{
-    margin-left: 240px;
+    margin-left: 200px;
 }
 
 footer{
