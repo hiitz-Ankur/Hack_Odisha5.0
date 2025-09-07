@@ -1,24 +1,28 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session
-from .. import database, schemas, models, crud, auth
+from app import crud, models, schemas, database
 
 router = APIRouter()
 
+# Create a job (Employer only)
 @router.post("/", response_model=schemas.JobRead)
-def create_job(job_in: schemas.JobCreate, session: Session = Depends(database.get_session), current_user: models.User = Depends(auth.get_current_user)):
-    # only hirers can post jobs
-    if current_user.role != "hirer":
-        raise HTTPException(status_code=403, detail="Only hirers can create jobs")
-    job = models.Job(hirer_id=current_user.id, title=job_in.title, description=job_in.description, required_skill=job_in.required_skill)
-    return crud.create_job(session, job)
+def create_job(job: schemas.JobCreate, session: Session = Depends(database.get_session), current_user: models.User = Depends(database.get_current_user)):
+    if current_user.role != "employer":
+        raise HTTPException(status_code=403, detail="Only employers can post jobs")
+    db_job = models.Job.from_orm(job)
+    db_job.hirer_id = current_user.id
+    db_job.status = "open"
+    return crud.create_job(session, db_job)
 
+# List all jobs
 @router.get("/", response_model=list[schemas.JobRead])
 def list_jobs(session: Session = Depends(database.get_session)):
     return crud.list_jobs(session)
 
+# Get single job
 @router.get("/{job_id}", response_model=schemas.JobRead)
 def get_job(job_id: int, session: Session = Depends(database.get_session)):
-    job = crud.get_job(session, job_id)
-    if not job:
+    db_job = crud.get_job(session, job_id)
+    if not db_job:
         raise HTTPException(status_code=404, detail="Job not found")
-    return job
+    return db_job

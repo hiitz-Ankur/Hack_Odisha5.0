@@ -1,28 +1,49 @@
-document.getElementById("registerForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
+async function registerEmployee() {
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm_password").value;
 
-    const response = await fetch("http://127.0.0.1:8000/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            name: name,
-            email: email,
-            password: password,
-            role: "freelancer" // fixed for employee
-        })
-    });
+    // Optional extra fields
+    const bday = document.getElementById("bday").value;
+    const phone_number = document.getElementById("phone_number").value;
+    const occupation = document.getElementById("occupation").value;
+    const experience = document.getElementById("experience").value;
 
-    const data = await response.json();
-    console.log(data);
-
-    if (response.ok) {
-        alert("Registration successful!");
-        window.location.href = "login_emply.html";
-    } else {
-        alert("Error: " + data.detail);
+    if (password !== confirmPassword) {
+        alert("❌ Passwords do not match!");
+        return;
     }
-});
+
+    try {
+        const response = await fetch("/users/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                name: `${fname} ${lname}`,
+                email,
+                password,
+                bday,
+                phone_number,
+                occupation,
+                experience
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("✅ Registration successful! Please login.");
+            console.log("New user:", data);
+
+            // Redirect to login page
+            window.location.href = "/employee_login";
+        } else {
+            alert("❌ Registration failed: " + data.detail);
+        }
+    } catch (err) {
+        console.error("Error:", err);
+        alert("⚠️ Something went wrong. Please try again.");
+    }
+}

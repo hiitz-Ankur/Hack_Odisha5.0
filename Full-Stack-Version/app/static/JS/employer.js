@@ -1,64 +1,54 @@
-// Count total inputs dynamically
-  function updateInputCount() {
-    const form = document.getElementById("jobForm");
-    const inputs = form.querySelectorAll("input, select, textarea");
-    document.getElementById("inputCount").textContent =
-      "Total input fields: " + inputs.length;
-  }
+document.addEventListener("DOMContentLoaded", () => {
+    const jobForm = document.getElementById("jobForm");
 
-  // Run on load and whenever form changes
-  document.addEventListener("DOMContentLoaded", updateInputCount);
-  document.getElementById("jobForm").addEventListener("input", updateInputCount);
+    jobForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const addBtn = document.querySelector(".btn-success"); // "Add Member" button
-    const memberTableBody = document.querySelector("#memberTable tbody");
-    const totalMembersEl = document.getElementById("totalMembers");
-    const totalPriceEl = document.getElementById("totalPrice");
+        const token = localStorage.getItem("token");  // Employer must be logged in
 
-    let memberCount = 0;
-    let totalPrice = 0;
-
-    addBtn.addEventListener("click", () => {
-        const occupation = document.getElementById("Occup").value;
-        const price = parseFloat(document.getElementById("price").value);
-        const qty = parseInt(document.getElementById("Qty").value);
-
-        if (!occupation || occupation === "Select Occupation") {
-            alert("Please select an occupation");
-            return;
-        }
-        if (isNaN(price) || price <= 0) {
-            alert("Please enter a valid price");
-            return;
-        }
-        if (isNaN(qty) || qty <= 0) {
-            alert("Please enter a valid quantity");
+        if (!token) {
+            alert("⚠️ Please login first.");
+            window.location.href = "/employer_login";
             return;
         }
 
-        const rowTotal = price * qty;
-        memberCount += qty;
-        totalPrice += rowTotal;
+        // Collect form values
+        const jobData = {
+            description: document.getElementById("descrip").value,
+            location: document.getElementById("location").value,
+            pincode: document.getElementById("pincode").value,
+            requirement: document.getElementById("requirement").value,
+            occupation: document.getElementById("Occup").value,
+            price: document.getElementById("price").value,
+            quantity: document.getElementById("Qty").value,
+            from_date: document.getElementById("fdate").value,
+            from_time: document.getElementById("ftime").value,
+            to_date: document.getElementById("tdate").value,
+            to_time: document.getElementById("ttime").value
+        };
 
-        // Add row to table
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${memberTableBody.children.length + 1}</td>
-            <td>${occupation}</td>
-            <td>₹${price}</td>
-            <td>${qty}</td>
-            <td>₹${rowTotal}</td>
-        `;
-        memberTableBody.appendChild(row);
+        try {
+            const response = await fetch("/jobs", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}` // ✅ secure
+                },
+                body: JSON.stringify(jobData)
+            });
 
-        // Update summary
-        totalMembersEl.textContent = memberCount;
-        totalPriceEl.textContent = totalPrice;
+            const data = await response.json();
 
-        // Clear inputs
-        document.getElementById("Occup").selectedIndex = 0;
-        document.getElementById("price").value = "";
-        document.getElementById("Qty").value = "";
+            if (response.ok) {
+                alert("✅ Job posted successfully!");
+                console.log("Job created:", data);
+                jobForm.reset();
+            } else {
+                alert("❌ Failed to post job: " + (data.detail || "Unknown error"));
+            }
+        } catch (err) {
+            console.error("Error:", err);
+            alert("⚠️ Something went wrong while posting job.");
+        }
     });
 });

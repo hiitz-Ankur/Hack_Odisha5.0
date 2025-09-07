@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employee Sign Up Page</title>
+  <title>Employee Sign Up</title>
   <link rel="stylesheet" href="/static/CSS/register_emply.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="signup-wrapper">
-    
     <div class="form-section">
       <h2>Register</h2>
-      <form>
-        
+      <!-- ✅ Form is active, will call JS -->
+      <form onsubmit="event.preventDefault(); registerEmployee();">
+
         <div class="form-row">
           <div class="input-group">
             <label for="fname">First name</label>
@@ -25,13 +25,11 @@
           </div>
         </div>
 
-        
         <div class="input-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Email" required>
         </div>
 
-        
         <div class="form-row">
           <div class="input-group">
             <label for="bday">Date of Birth</label>
@@ -43,46 +41,44 @@
           </div>
         </div>
 
-        
         <div class="input-group">
           <label for="occupation">Occupation</label>
           <input type="text" id="occupation" name="occupation" placeholder="Occupation" required>
         </div>
 
-        
         <div class="input-group">
-          <label for="past-experience">Past Experience</label>
-          <textarea id="past-experience" name="past-experience" placeholder="Past Experience" rows="3" required></textarea>
+          <label for="experience">Past Experience</label>
+          <textarea id="experience" name="experience" placeholder="Past Experience" rows="3" required></textarea>
         </div>
 
-        
         <div class="form-row">
           <div class="input-group password-group">
-            <label for="Epassword">Password</label>
-            <input type="password" id="Epassword" name="Epassword" placeholder="Password" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
             <i class="fas fa-eye password-toggle"></i>
           </div>
           <div class="input-group password-group">
-            <label for="Repassword">Confirm password</label>
-            <input type="password" id="Repassword" name="Repassword" placeholder="Confirm password" required>
+            <label for="confirm_password">Confirm password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
             <i class="fas fa-eye password-toggle"></i>
           </div>
         </div>
+
+        <!-- ✅ Button is inside form -->
+        <div class="action-section">
+          <button type="submit" class="signup-btn">Register</button>
+          <div class="login-link">
+            <p>Already have an account? <a href="/employee_login">Log In</a></p>
+          </div>
+          <div class="divider"><span>or</span></div>
+          <button type="button" class="social-btn google-btn">
+            <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google icon">
+            Sign up with Google
+          </button>
+        </div>
+
       </form>
     </div>
-
-    <div class="action-section">
-      <button type="submit" class="signup-btn">Register</button>
-      <div class="login-link">
-        <p>Already have an account? <a href="#">Log In</a></p>
-      </div>
-      <div class="divider"><span>or</span></div>
-      <button class="social-btn google-btn">
-        <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google icon">
-        Sign up with Google
-      </button>
-    </div>
-
   </div>
 </body>
 <script src="/static/JS/register_emply.js"></script>

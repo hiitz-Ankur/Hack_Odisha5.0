@@ -7,6 +7,8 @@ python-multipart
 install email-validator
 install --upgrade passlib
 install bcrypt==4.0.1
+pip install jinja2
+
 
 
 
