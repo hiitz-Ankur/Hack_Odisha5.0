@@ -2,10 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # ✅ Import database setup
-from Backend import database  
+from Backend.app import database  
 
 # ✅ Import your routers
-from Backend.app.routers import auth_router   # adjust if router file has different name
+from Backend.app.routers.auth_router import router as auth_router   # adjust if router file has different name
 # from Backend.app.routers import another_router  # add others here if needed
 
 app = FastAPI()
