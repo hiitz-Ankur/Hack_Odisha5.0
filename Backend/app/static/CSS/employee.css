@@ -8,7 +8,7 @@ html,body{
 }
 
 body{
-    background: url(../Image/employee/background_2.png) no-repeat center center;
+    background: url(/static/Image/employee/background_2.png) no-repeat center center;
     background-size: cover;
     /* background-color: #dddddd; */
 }

@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(../Image/home/background_2.png) ;
+    background-image: url(/static/Image/home/background_2.png) ;
 }
 
 .navbar_whole{

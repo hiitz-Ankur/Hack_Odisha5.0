@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session
 from .. import database, schemas, models, crud, auth
 
-router = APIRouter(prefix="/feedback", tags=["feedback"])
+router = APIRouter()
 
 @router.post("/", response_model=schemas.FeedbackRead)
 def give_feedback(f_in: schemas.FeedbackCreate, session: Session = Depends(database.get_session), current_user: models.User = Depends(auth.get_current_user)):

@@ -3,7 +3,7 @@ from sqlmodel import Session
 from datetime import date
 from .. import database, schemas, models, crud, auth
 
-router = APIRouter(prefix="/contracts", tags=["contracts"])
+router = APIRouter()
 
 @router.post("/", response_model=schemas.ContractRead)
 def create_contract(contract_in: schemas.ContractCreate, session: Session = Depends(database.get_session), current_user: models.User = Depends(auth.get_current_user)):

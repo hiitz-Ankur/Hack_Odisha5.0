@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session
 from .. import database, schemas, models, crud, auth
 
-router = APIRouter(prefix="/applications", tags=["applications"])
+router = APIRouter()
 
 @router.post("/", response_model=schemas.ApplicationRead)
 def apply_to_job(app_in: schemas.ApplicationCreate, session: Session = Depends(database.get_session), current_user: models.User = Depends(auth.get_current_user)):
