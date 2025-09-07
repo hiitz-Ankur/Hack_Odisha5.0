@@ -1,59 +1,33 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .database import create_db_and_tables
-from .routers import (
-    auth_router,
-    users_router,
-    jobs_router,
-    applications_router,
-    contracts_router,
-    feedback_router,
-)
+# ✅ Import database setup
+from Backend import database  
 
-# Create FastAPI app
-app = FastAPI(title="Freelancer-Hirer Portal API")
+# ✅ Import your routers
+from Backend.app.routers import auth_router   # adjust if router file has different name
+# from Backend.app.routers import another_router  # add others here if needed
 
-# CORS setup
+app = FastAPI()
+
+# ✅ Middleware for CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # allow all origins (hackathon mode)
+    allow_origins=["*"],  # change later for security
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# ✅ Startup event for DB
 @app.on_event("startup")
-def on_startup():
-    create_db_and_tables()
+async def on_startup():
+    database.create_db_and_tables()
 
-# Include routers
-app.include_router(auth_router.router)
-app.include_router(users_router.router)
-app.include_router(jobs_router.router)
-app.include_router(applications_router.router)
-app.include_router(contracts_router.router)
-app.include_router(feedback_router.router)
+# ✅ Routers
+app.include_router(auth_router)
 
+# ✅ Root endpoint
 @app.get("/")
-def root():
+async def root():
     return {"message": "Backend is running 🚀"}
-from fastapi.responses import FileResponse
-import os
-
-# existing app setup...
-
-# 👇 Add this after all app.include_router(...)
-@app.get("/favicon.ico")
-async def favicon():
-    favicon_path = os.path.join("static", "favicon.ico")
-    return FileResponse(favicon_path)
-from fastapi.middleware.cors import CORSMiddleware
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],   # allow all origins for hackathon demo
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
