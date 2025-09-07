@@ -45,6 +45,11 @@ body{
     color: #dddddd;
 }
 
+.form-label {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black; 
+}
+
 #tandc_img{
     width: 25px;
     height: 25px;
@@ -65,14 +70,14 @@ body{
 }
 
 main{
-    height: 800px;
+    height: 680px;
 }
 
 .left_side{
     margin: 45px 150px;
     background-color: rgba(0,0,0, 0.5);
-    height: 700px;
-    width: 700px;
+    height: 600px;
+    width: 600px;
     border-radius: 50px;
 
 }
