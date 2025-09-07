@@ -48,3 +48,12 @@ import os
 async def favicon():
     favicon_path = os.path.join("static", "favicon.ico")
     return FileResponse(favicon_path)
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # allow all origins for hackathon demo
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
